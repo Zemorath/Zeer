@@ -1,0 +1,16 @@
+{
+  "books": [
+      {
+          "id": 1,
+          "title": "The Final Empire",
+          "author": "Brandon Sanderson",
+          "isbn": "9780575089914"
+      },
+      {
+          "id": 2,
+          "title": "No Longer Human",
+          "author": "Osamu Dazai",
+          "isbn": "9780811204811"
+      }
+  ]
+}
