@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Header from "./Header";
 import LibraryList from "./LibraryList";
 import SearchPage from "./SearchPage";
-import { BrowserRouter, Route } from "react-router-dom/cjs/react-router-dom.min";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 function App() {
 
@@ -16,13 +16,15 @@ function App() {
 
     return (
         <>
-            <Route path="/">
-                <Header />
-                <LibraryList libraryBooks={libraryBooks}/>
-            </Route>
-            <Route path="/search">
-                {/* <SearchPage /> */}
-            </Route>
+            <Header />
+            <Switch>
+                <Route exact path="/">
+                    <LibraryList libraryBooks={libraryBooks}/>
+                </Route>
+                <Route path="/search">
+                    <SearchPage />
+                </Route>
+            </Switch>
         </>
     )
 }

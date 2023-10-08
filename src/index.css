@@ -12,6 +12,11 @@ code {
     monospace;
 }
 
+#book-collection {
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
 .ui.centered.header {
   padding-top: 0.8em;
   padding-bottom: 0.5em;
@@ -57,4 +62,27 @@ code {
 
 .title {
   color: #1B1C1D;
+}
+
+.active {
+  color: rgba(255,255,255,.7)!important;
+  border-bottom-color: transparent;
+  border-bottom-style: solid;
+  border-radius: 0;
+  align-self: flex-end;
+  margin: 0 0 -2px;
+  padding: 0.85714286em 1.14285714em;
+  border-bottom-width: 2px;
+  transition: color .1s ease;
+  box-shadow: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  position: relative;
+  vertical-align: middle;
+  line-height: 1;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+  flex: 0 0 auto;
+  font-weight: 400;
 }
