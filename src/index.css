@@ -86,3 +86,14 @@ code {
   flex: 0 0 auto;
   font-weight: 400;
 }
+
+.ui.medium.form {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 35em;
+}
+
+.field {
+  padding-top: 1em;
+}
