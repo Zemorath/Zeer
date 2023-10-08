@@ -97,3 +97,11 @@ code {
 .field {
   padding-top: 1em;
 }
+
+.column {
+  margin-top: 5em;
+}
+
+.ui.fluid.large.black.submit.button {
+  margin-top: 2em;
+}
