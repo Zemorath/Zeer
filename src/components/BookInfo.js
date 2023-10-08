@@ -40,7 +40,7 @@ function BookInfo({ book }) {
 
     return (
         
-        <div class="card">
+        <div class="ui card" id="card">
             <div class="image">
                 {showPic && (
                     <img src={url} alt={title} />

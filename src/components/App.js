@@ -17,11 +17,11 @@ function App() {
     return (
         <>
             <Route path="/">
+                <Header />
                 <LibraryList libraryBooks={libraryBooks}/>
-                {/* <SearchPage /> */}
             </Route>
             <Route path="/search">
-                {/* <Header /> */}
+                {/* <SearchPage /> */}
             </Route>
         </>
     )

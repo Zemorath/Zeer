@@ -11,3 +11,50 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.ui.centered.header {
+  padding-top: 0.8em;
+  padding-bottom: 0.5em;
+  font-size: 3rem;
+}
+
+.ui.secondary.inverted.pointing.menu {
+  border-width: 2px;
+  border-color: rgba(34, 36, 38, 0.15);
+  background-color: #1B1C1D;
+  margin-bottom: 1em;
+}
+
+.ui.search.box {
+  margin: 0 auto;
+  padding-top: 1em;
+  padding-left: 8%;
+}
+
+.ui.centered.input {
+  width: 24em;
+}
+
+.ui.secondary.pointing.menu {
+  margin-left: 0em;
+  margin-right: 0em;
+  border-bottom: 2px solid rgba(34, 36, 38, 0.15);
+}
+
+.ui.secondary.inverted.menu {
+  background-color: transparent;
+}
+
+.ui.large.menu {
+  font-size: 1rem
+}
+
+.ui.inverted.menu {
+  border: 0px solid transparent;
+  background: #1B1C1D;
+  box-shadow: none;
+}
+
+.title {
+  color: #1B1C1D;
+}
