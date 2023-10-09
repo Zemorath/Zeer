@@ -13,6 +13,8 @@ function App() {
     const [ isbnInput, setSearchIsbn ] = useState('')
     const [ searchedBooks, setBooks ] = useState([])
 
+    const [ search, setSearch ] = useState('')
+
     const [ isActive, setActive ] = useState(() => {
         if (searchedBooks.length > 0) {
             return false;
@@ -48,10 +50,10 @@ function App() {
 
     return (
         <>
-            <Header />
+            <Header setSearch={setSearch}/>
             <Switch>
                 <Route exact path="/">
-                    <LibraryList libraryBooks={libraryBooks}/>
+                    <LibraryList libraryBooks={libraryBooks} search={search}/>
                 </Route>
                 <Route path="/search">
                     <SearchPage 

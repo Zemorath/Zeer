@@ -1,9 +1,13 @@
 import React, { useState } from "react";
 import { BrowserRouter, Route, NavLink, Switch } from "react-router-dom";
 
-function Header() {
+function Header({ setSearch }) {
 
     const [ isActive, setActive ] = useState(false)
+
+    function handleLibrarySearch(e) {
+        setSearch(e.target.value)
+    }
 
     return (
         <div className="ui container">
@@ -13,7 +17,7 @@ function Header() {
                 <NavLink to="/search" className={({ isActive }) => (isActive ? 'active' : 'item')}>Search</NavLink>
                 <div className="ui search box">
                     <a className="ui centered input">
-                        <input type="text" placeholder="Search Library..." />
+                        <input type="text" placeholder="Search Library..." onChange={handleLibrarySearch}/>
                     </a>
                 </div>
                 <div className="right item">

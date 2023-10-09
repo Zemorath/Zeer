@@ -33,32 +33,6 @@ function SearchInfo({ searchedBooks, setActive, book, libraryBooks, setLibrary, 
         }
     })
 
-    
-
-    // function handlePicture(e) {
-    //     e.preventDefault()
-    //     let url = prompt("Please enter photo URL.")
-    //     if (url !== null) {
-    //         let cover = new Image();
-    //         cover.src = url
-            
-    //         return fetch(`http://localhost:3000/books/${book.id}`, {
-    //             method: "PATCH",
-    //             headers: {
-    //                 "Content-Type": "application/json",
-    //                 Accept: "application/json"
-    //             },
-    //             body: JSON.stringify({
-    //                 "url": `${cover.src}`,
-    //             })
-    //         }).then(resp => resp.json())
-    //         .then(setShowPic(!showPic))
-    //         .then(setShowButton(!showButton))
-            
-    //     } else {
-
-    //     }
-    // }
 
     function handleAdd() {
         const newBook = {
