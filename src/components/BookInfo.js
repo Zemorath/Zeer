@@ -14,7 +14,8 @@ function BookInfo({ book }) {
 
     
 
-    function handlePicture() {
+    function handlePicture(e) {
+        e.preventDefault()
         let url = prompt("Please enter photo URL.")
         if (url !== null) {
             let cover = new Image();
