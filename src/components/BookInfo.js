@@ -14,6 +14,10 @@ function BookInfo({ book }) {
 
     const [ status, setStatus ] = useState("")
 
+    function handleStatus(e) {
+        setStatus(e.target.value)
+    }
+
     function handlePicture(e) {
         e.preventDefault()
         let url = prompt("Please enter photo URL.")
@@ -58,19 +62,37 @@ function BookInfo({ book }) {
                     {author}
                 </div>
             </div>
+            {status == "To Read" && (
+                <a class="ui violet ribbon label">To Read</a>
+            )}
+            {status == "Reading" && (
+                <a class="ui orange ribbon label">Reading</a>
+            )}
+            {status == "Completed" && (
+                <a class="ui green ribbon label">Completed</a>
+            )}
+            {status == "Collectible" && (
+                <a class="ui teal ribbon label">Collectible</a>
+            )}
+            {status == "Dropped" && (
+                <a class="ui brown ribbon label">Dropped</a>
+            )}
+            {status == "On Hold" && (
+                <a class="ui grey ribbon label">On Hold</a>
+            )}
             <div class="exta content">
                 <span class="right floated">
                     {showButton && <button onClick={handlePicture} class="book-cover"> Add photo!</button>}
                 </span>
                 <span class="left floated">
-                    <select class="ui dropdown">
-                        <option value="6">Select</option>
-                        <option value="0">To Read</option>
-                        <option value="1">Reading</option>
-                        <option value="2">Completed</option>
-                        <option value="3">Collectible</option>
-                        <option value="4">Dropped</option>
-                        <option value="5">On Hold</option>
+                    <select class="ui dropdown" onChange={handleStatus}>
+                        <option value="Select">Select</option>
+                        <option value="To Read">To Read</option>
+                        <option value="Reading">Reading</option>
+                        <option value="Completed">Completed</option>
+                        <option value="Collectible">Collectible</option>
+                        <option value="Dropped">Dropped</option>
+                        <option value="On Hold">On Hold</option>
                     </select>
                 </span>
             </div>
