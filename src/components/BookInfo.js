@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
 
-function BookInfo({ book }) {
+function BookInfo({ book, setLibrary, libraryBooks, onUpdateStatus, onDeleteBook }) {
     const { title, author, isbn, url, status } = book;
 
     const [ showPic, setShowPic ] = useState(url)
@@ -27,8 +27,19 @@ function BookInfo({ book }) {
             })
         })    
         .then((r) => r.json())
+        .then((book) => onUpdateStatus(book))
+        
 
         setStatus(currentStatus)
+
+    }
+
+    function handleDelete() {
+        fetch(`http://localhost:3000/books/${book.id}`, {
+            method: "DELETE",
+        })
+            .then((r) => r.json())
+            .then(() => onDeleteBook(book))
     }
 
     function handlePicture(e) {
@@ -96,6 +107,11 @@ function BookInfo({ book }) {
             <div class="exta content">
                 <span class="right floated">
                     {showButton && <button onClick={handlePicture} class="book-cover"> Add photo!</button>}
+                </span>
+                <span class="right floated">
+                    <button class="ui icon button" onClick={handleDelete}>
+                        <i class="red trash icon"></i>
+                    </button>
                 </span>
                 <span class="left floated">
                     <select class="ui dropdown" onChange={handleStatus}>

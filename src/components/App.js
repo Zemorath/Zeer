@@ -53,7 +53,7 @@ function App() {
             <Header setSearch={setSearch}/>
             <Switch>
                 <Route exact path="/">
-                    <LibraryList libraryBooks={libraryBooks} search={search}/>
+                    <LibraryList libraryBooks={libraryBooks} setLibrary={setLibrary} search={search}/>
                 </Route>
                 <Route path="/search">
                     <SearchPage 

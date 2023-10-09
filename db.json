@@ -6,7 +6,7 @@
       "author": "Brandon Sanderson",
       "isbn": "9780575089914",
       "url": "https://m.media-amazon.com/images/I/51sKzl+R6OL._SY445_SX342_.jpg",
-      "status": "Reading"
+      "status": "To Read"
     },
     {
       "id": 2,
@@ -45,50 +45,65 @@
       "author": "Junji Ito",
       "isbn": "9788575326909",
       "id": 6,
-      "url": "https://m.media-amazon.com/images/I/51RZJvWcBGL._SY445_SX342_.jpg"
+      "url": "https://m.media-amazon.com/images/I/51RZJvWcBGL._SY445_SX342_.jpg",
+      "status": "To Read"
     },
     {
       "title": "The Eye of the World",
       "author": "Robert Jordan",
       "isbn": "9780356190686",
       "id": 7,
-      "url": "https://m.media-amazon.com/images/I/91cJ0-MXtGL._SY466_.jpg"
+      "url": "https://m.media-amazon.com/images/I/91cJ0-MXtGL._SY466_.jpg",
+      "status": "To Read"
     },
     {
       "title": "Foundryside",
       "author": "Robert Jackson Bennett",
       "isbn": "1786487853",
-      "id": 8
+      "id": 8,
+      "status": "To Read"
     },
     {
       "title": "The Way of Kings",
       "author": "Brandon Sanderson",
       "isbn": "9780575102484",
-      "id": 9
-    },
-    {
-      "title": "Red Rising",
-      "author": "Pierce Brown",
-      "isbn": "9781444758986",
-      "id": 10
+      "id": 9,
+      "status": "On Hold"
     },
     {
       "title": "The Atlas Six",
       "author": "Olivie Blake",
       "isbn": "1250854547",
-      "id": 11
+      "id": 11,
+      "status": "To Read"
     },
     {
       "title": "Golden Son",
       "author": "Pierce Brown",
       "isbn": "9781664411418",
-      "id": 12
+      "id": 12,
+      "status": "Collectible"
     },
     {
       "title": "Oathbringer",
       "author": "Brandon Sanderson",
       "isbn": "1250297141",
-      "id": 13
+      "id": 13,
+      "status": "Collectible"
+    },
+    {
+      "title": "Tomie",
+      "author": "Junji Ito",
+      "isbn": "8418569522",
+      "id": 14,
+      "status": "Collectible"
+    },
+    {
+      "title": "Red Rising",
+      "author": "Pierce Brown",
+      "isbn": "9781444758986",
+      "id": 15,
+      "status": "To Read"
     }
   ]
 }
