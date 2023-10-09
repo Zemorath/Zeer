@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import SearchInfo from "./SearchInfo";
 
 
-function SearchPage({ setSearchTitle, setSearchAuthor, setSearchIsbn, searchedBooks, isActive, setActive, handleSearch }) {
+function SearchPage({ setSearchTitle, setSearchAuthor, setSearchIsbn, searchedBooks, isActive, setActive, handleSearch, libraryBooks, setLibrary }) {
 
     return (
         <div className="ui middle aligned center aligned grid">
@@ -39,7 +39,7 @@ function SearchPage({ setSearchTitle, setSearchAuthor, setSearchIsbn, searchedBo
                         <button className="ui negative basic button right floated">Cancel Search</button>
                     </div>
                     <div id="book-collection" className="ui link cards">{searchedBooks.map((book) => (
-                        <SearchInfo book={book} key={book.id} />
+                        <SearchInfo book={book} key={book.id} libraryBooks={libraryBooks} setLibrary={setLibrary}/>
                     ))}</div>
                 </>
             )}  

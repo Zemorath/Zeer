@@ -12,6 +12,36 @@
       "author": "Osamu Dazai",
       "isbn": "9780811204811",
       "url": "https://m.media-amazon.com/images/I/61WikOg1SQL._SY466_.jpg"
+    },
+    {
+      "title": "The creature from Jekyll Island",
+      "author": "G. Edward Griffin",
+      "isbn": "0912986212",
+      "id": 3
+    },
+    {
+      "title": "The daily stoic",
+      "author": "Ryan Holiday",
+      "isbn": "9780735211735",
+      "id": 4
+    },
+    {
+      "title": "Smashed",
+      "author": "Junji Ito",
+      "isbn": "1421598469",
+      "id": 5
+    },
+    {
+      "title": "Uzumaki",
+      "author": "Junji Ito",
+      "isbn": "9788575326909",
+      "id": 6
+    },
+    {
+      "title": "The Eye of the World",
+      "author": "Robert Jordan",
+      "isbn": "9780356190686",
+      "id": 7
     }
   ]
 }

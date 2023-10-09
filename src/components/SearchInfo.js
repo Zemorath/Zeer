@@ -1,8 +1,10 @@
 import React, { useState } from "react"
+import { useHistory } from "react-router-dom";
 
-function SearchInfo({ searchedBooks, setActive, book }) {
+function SearchInfo({ searchedBooks, setActive, book, libraryBooks, setLibrary }) {
 
     // console.log(searchedBooks)
+    const history = useHistory();
 
     const { title, author_name, isbn, url } = book
 
@@ -58,32 +60,53 @@ function SearchInfo({ searchedBooks, setActive, book }) {
         }
     }
 
+    function handleAdd() {
+        const newBook = {
+            title: title,
+            author: bookAuthor,
+            isbn: bookIsbn
+        }
+
+        fetch(`http://localhost:3000/books`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(newBook)
+        })
+            .then((r) => r.json())
+            .then((newBook) => {
+                setLibrary([...libraryBooks, newBook]);
+                history.push("/");
+            })
+    }
+
     return (
         <>
-            <div class="ui card" id="card">
-                <div class="image">
+            <div className="ui card" id="card" onClick={handleAdd}>
+                <div className="image">
                     {showPic && (
                         <img src={book.url} alt={title} />
                     )}
                 </div>
-                <div class="content">
-                    <div class="header">
+                <div className="content">
+                    <div className="header">
                         {title}
                     </div>
                     {bookIsbn && (
-                        <div class="meta">
+                        <div className="meta">
                             <a>{bookIsbn}</a>
                         </div> 
                     )}
                     {bookAuthor && (
-                        <div class="description">
+                        <div className="description">
                             {bookAuthor}
                         </div>
                     )}
                 </div>
-                <div class="exta content">
-                    <span class="right floated">
-                        {showButton && <button onClick={handlePicture} class="book-cover"> Add photo!</button>}
+                <div className="exta content">
+                    <span className="right floated">
+                        {showButton && <button onClick={handlePicture} className="book-cover"> Add photo!</button>}
                     </span>
                 </div>
             </div>

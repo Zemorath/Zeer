@@ -28,6 +28,7 @@ function App() {
             .then(setActive(true))
     }, [])
 
+
     function handleSearch(e) {
         e.preventDefault()
         let search = (() => {
@@ -60,7 +61,9 @@ function App() {
                         searchedBooks={searchedBooks} 
                         isActive={isActive}
                         setActive={setActive}
-                        handleSearch={handleSearch}/>
+                        handleSearch={handleSearch}
+                        libraryBooks={libraryBooks}
+                        setLibrary={setLibrary}/>
                 </Route>
             </Switch>
         </>
