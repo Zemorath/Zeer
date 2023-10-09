@@ -63,7 +63,8 @@ function App() {
                         setActive={setActive}
                         handleSearch={handleSearch}
                         libraryBooks={libraryBooks}
-                        setLibrary={setLibrary}/>
+                        setLibrary={setLibrary}
+                        setBooks={setBooks}/>
                 </Route>
             </Switch>
         </>

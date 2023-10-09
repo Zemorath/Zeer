@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { useHistory } from "react-router-dom";
 
-function SearchInfo({ searchedBooks, setActive, book, libraryBooks, setLibrary }) {
+function SearchInfo({ searchedBooks, setActive, book, libraryBooks, setLibrary, setBooks }) {
 
     // console.log(searchedBooks)
     const history = useHistory();
@@ -35,30 +35,30 @@ function SearchInfo({ searchedBooks, setActive, book, libraryBooks, setLibrary }
 
     
 
-    function handlePicture(e) {
-        e.preventDefault()
-        let url = prompt("Please enter photo URL.")
-        if (url !== null) {
-            let cover = new Image();
-            cover.src = url
+    // function handlePicture(e) {
+    //     e.preventDefault()
+    //     let url = prompt("Please enter photo URL.")
+    //     if (url !== null) {
+    //         let cover = new Image();
+    //         cover.src = url
             
-            return fetch(`http://localhost:3000/books/${book.id}`, {
-                method: "PATCH",
-                headers: {
-                    "Content-Type": "application/json",
-                    Accept: "application/json"
-                },
-                body: JSON.stringify({
-                    "url": `${cover.src}`,
-                })
-            }).then(resp => resp.json())
-            .then(setShowPic(!showPic))
-            .then(setShowButton(!showButton))
+    //         return fetch(`http://localhost:3000/books/${book.id}`, {
+    //             method: "PATCH",
+    //             headers: {
+    //                 "Content-Type": "application/json",
+    //                 Accept: "application/json"
+    //             },
+    //             body: JSON.stringify({
+    //                 "url": `${cover.src}`,
+    //             })
+    //         }).then(resp => resp.json())
+    //         .then(setShowPic(!showPic))
+    //         .then(setShowButton(!showButton))
             
-        } else {
+    //     } else {
 
-        }
-    }
+    //     }
+    // }
 
     function handleAdd() {
         const newBook = {
@@ -78,17 +78,14 @@ function SearchInfo({ searchedBooks, setActive, book, libraryBooks, setLibrary }
             .then((newBook) => {
                 setLibrary([...libraryBooks, newBook]);
                 history.push("/");
+                setActive(true)
+                setBooks([])
             })
     }
 
     return (
         <>
             <div className="ui card" id="card" onClick={handleAdd}>
-                <div className="image">
-                    {showPic && (
-                        <img src={book.url} alt={title} />
-                    )}
-                </div>
                 <div className="content">
                     <div className="header">
                         {title}
@@ -103,11 +100,6 @@ function SearchInfo({ searchedBooks, setActive, book, libraryBooks, setLibrary }
                             {bookAuthor}
                         </div>
                     )}
-                </div>
-                <div className="exta content">
-                    <span className="right floated">
-                        {showButton && <button onClick={handlePicture} className="book-cover"> Add photo!</button>}
-                    </span>
                 </div>
             </div>
         </>

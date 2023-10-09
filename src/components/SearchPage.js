@@ -1,8 +1,16 @@
 import React, { useState, useEffect } from "react";
 import SearchInfo from "./SearchInfo";
+import { useHistory } from "react-router-dom"
 
 
-function SearchPage({ setSearchTitle, setSearchAuthor, setSearchIsbn, searchedBooks, isActive, setActive, handleSearch, libraryBooks, setLibrary }) {
+function SearchPage({ setSearchTitle, setSearchAuthor, setSearchIsbn, searchedBooks, isActive, setActive, handleSearch, libraryBooks, setLibrary, setBooks }) {
+
+    const history = useHistory();
+
+    function handleCancel() {
+        setActive(true)
+        setBooks([])
+    }
 
     return (
         <div className="ui middle aligned center aligned grid">
@@ -36,10 +44,10 @@ function SearchPage({ setSearchTitle, setSearchAuthor, setSearchIsbn, searchedBo
             {isActive && searchedBooks.length > 0 && (
                 <>
                     <div>
-                        <button className="ui negative basic button right floated">Cancel Search</button>
+                        <button className="ui negative basic button right floated" onClick={handleCancel}>Cancel Search</button>
                     </div>
                     <div id="book-collection" className="ui link cards">{searchedBooks.map((book) => (
-                        <SearchInfo book={book} key={book.id} libraryBooks={libraryBooks} setLibrary={setLibrary}/>
+                        <SearchInfo book={book} key={book.id} libraryBooks={libraryBooks} setLibrary={setLibrary} setActive={setActive} setBooks={setBooks}/>
                     ))}</div>
                 </>
             )}  

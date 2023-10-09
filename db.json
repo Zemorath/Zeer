@@ -4,7 +4,8 @@
       "id": 1,
       "title": "The Final Empire",
       "author": "Brandon Sanderson",
-      "isbn": "9780575089914"
+      "isbn": "9780575089914",
+      "url": "https://m.media-amazon.com/images/I/51sKzl+R6OL._SY445_SX342_.jpg"
     },
     {
       "id": 2,
@@ -17,31 +18,66 @@
       "title": "The creature from Jekyll Island",
       "author": "G. Edward Griffin",
       "isbn": "0912986212",
-      "id": 3
+      "id": 3,
+      "url": "https://m.media-amazon.com/images/I/51HwKIrxusL._SY445_SX342_.jpg"
     },
     {
       "title": "The daily stoic",
       "author": "Ryan Holiday",
       "isbn": "9780735211735",
-      "id": 4
+      "id": 4,
+      "url": "https://m.media-amazon.com/images/I/41QOsSsYHML._SY445_SX342_.jpg"
     },
     {
       "title": "Smashed",
       "author": "Junji Ito",
       "isbn": "1421598469",
-      "id": 5
+      "id": 5,
+      "url": "https://m.media-amazon.com/images/I/51GvCDqWsWL._SY445_SX342_.jpg"
     },
     {
       "title": "Uzumaki",
       "author": "Junji Ito",
       "isbn": "9788575326909",
-      "id": 6
+      "id": 6,
+      "url": "https://m.media-amazon.com/images/I/51RZJvWcBGL._SY445_SX342_.jpg"
     },
     {
       "title": "The Eye of the World",
       "author": "Robert Jordan",
       "isbn": "9780356190686",
-      "id": 7
+      "id": 7,
+      "url": "https://m.media-amazon.com/images/I/91cJ0-MXtGL._SY466_.jpg"
+    },
+    {
+      "title": "Foundryside",
+      "author": "Robert Jackson Bennett",
+      "isbn": "1786487853",
+      "id": 8
+    },
+    {
+      "title": "The Way of Kings",
+      "author": "Brandon Sanderson",
+      "isbn": "9780575102484",
+      "id": 9
+    },
+    {
+      "title": "Red Rising",
+      "author": "Pierce Brown",
+      "isbn": "9781444758986",
+      "id": 10
+    },
+    {
+      "title": "The Atlas Six",
+      "author": "Olivie Blake",
+      "isbn": "1250854547",
+      "id": 11
+    },
+    {
+      "title": "Golden Son",
+      "author": "Pierce Brown",
+      "isbn": "9781664411418",
+      "id": 12
     }
   ]
 }
