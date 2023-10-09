@@ -12,7 +12,7 @@ function BookInfo({ book }) {
         }
     })
 
-    
+    const [ status, setStatus ] = useState("")
 
     function handlePicture(e) {
         e.preventDefault()
@@ -61,6 +61,17 @@ function BookInfo({ book }) {
             <div class="exta content">
                 <span class="right floated">
                     {showButton && <button onClick={handlePicture} class="book-cover"> Add photo!</button>}
+                </span>
+                <span class="left floated">
+                    <select class="ui dropdown">
+                        <option value="6">Select</option>
+                        <option value="0">To Read</option>
+                        <option value="1">Reading</option>
+                        <option value="2">Completed</option>
+                        <option value="3">Collectible</option>
+                        <option value="4">Dropped</option>
+                        <option value="5">On Hold</option>
+                    </select>
                 </span>
             </div>
         </div>

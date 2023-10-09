@@ -24,15 +24,6 @@ function SearchInfo({ searchedBooks, setActive, book, libraryBooks, setLibrary, 
         }
     })
 
-    const [ showPic, setShowPic ] = useState(url)
-    const [ showButton, setShowButton ] = useState(() => {
-        if (url !== undefined) {
-            return false
-        } else {
-            return true
-        }
-    })
-
 
     function handleAdd() {
         const newBook = {
