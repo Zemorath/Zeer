@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 
 function BookInfo({ book }) {
-    const { title, author, isbn, url } = book;
+    const { title, author, isbn, url, status } = book;
 
     const [ showPic, setShowPic ] = useState(url)
     const [ showButton, setShowButton ] = useState(() => {
@@ -12,10 +12,26 @@ function BookInfo({ book }) {
         }
     })
 
-    const [ status, setStatus ] = useState("")
+    const [ showStatus, setStatus ] = useState(status)
 
     function handleStatus(e) {
-        setStatus(e.target.value)
+        const currentStatus = e.target.value
+
+        fetch(`http://localhost:3000/books/${book.id}`, {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                "status": currentStatus,
+            })
+        })    
+        .then((r) => r.json())
+        // .then(() => {
+        //     setStatus(e.target.value)
+        //     window.location.reload(false)})
+
+        setStatus(currentStatus)
     }
 
     function handlePicture(e) {
@@ -62,22 +78,22 @@ function BookInfo({ book }) {
                     {author}
                 </div>
             </div>
-            {status == "To Read" && (
+            {showStatus == "To Read" && (
                 <a class="ui violet ribbon label">To Read</a>
             )}
-            {status == "Reading" && (
+            {showStatus == "Reading" && (
                 <a class="ui orange ribbon label">Reading</a>
             )}
-            {status == "Completed" && (
+            {showStatus == "Completed" && (
                 <a class="ui green ribbon label">Completed</a>
             )}
-            {status == "Collectible" && (
+            {showStatus == "Collectible" && (
                 <a class="ui teal ribbon label">Collectible</a>
             )}
-            {status == "Dropped" && (
+            {showStatus == "Dropped" && (
                 <a class="ui brown ribbon label">Dropped</a>
             )}
-            {status == "On Hold" && (
+            {showStatus == "On Hold" && (
                 <a class="ui grey ribbon label">On Hold</a>
             )}
             <div class="exta content">
