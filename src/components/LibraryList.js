@@ -7,7 +7,10 @@ function LibraryList({ libraryBooks, search }) {
         if (search == '') {
             return true
         } else {
-            return (book.title.toLowerCase().includes(search.toLowerCase())) || (book.author.toLowerCase().includes(search.toLowerCase())) || (book.isbn.includes(search))
+            return (book.title.toLowerCase().includes(search.toLowerCase())) || 
+            (book.author.toLowerCase().includes(search.toLowerCase())) || 
+            (book.isbn.includes(search)) ||
+            (book.status !== undefined && book.status.toLowerCase().includes(search.toLowerCase()))
         }
     })
 

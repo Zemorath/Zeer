@@ -21,7 +21,17 @@ function Header({ setSearch }) {
                     </a>
                 </div>
                 <div className="right item">
-                    <a className="item">Sort By:</a>
+                    <span>
+                        Sort books
+                        <div className="ui inline dropdown">
+                            <i class="dropdown icon"></i>
+                            <div class="menu">
+                                <div class="item">Title</div>
+                                <div class="item">Author</div>
+                                <div class="item">Status</div>
+                            </div>
+                        </div>
+                    </span>
                 </div>
             </div>
         </div>

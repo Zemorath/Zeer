@@ -27,9 +27,6 @@ function BookInfo({ book }) {
             })
         })    
         .then((r) => r.json())
-        // .then(() => {
-        //     setStatus(e.target.value)
-        //     window.location.reload(false)})
 
         setStatus(currentStatus)
     }
