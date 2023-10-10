@@ -14,6 +14,8 @@ function App() {
     const [ searchedBooks, setBooks ] = useState([])
 
     const [ search, setSearch ] = useState('')
+    const [ sort, setSort ] = useState('')
+    
 
     const [ isActive, setActive ] = useState(() => {
         if (searchedBooks.length > 0) {
@@ -48,12 +50,13 @@ function App() {
             .then((searchedBooks) => setBooks(searchedBooks.docs))
     }
 
+
     return (
         <>
-            <Header setSearch={setSearch}/>
+            <Header setSearch={setSearch} setSort={setSort}/>
             <Switch>
                 <Route exact path="/">
-                    <LibraryList libraryBooks={libraryBooks} setLibrary={setLibrary} search={search}/>
+                    <LibraryList libraryBooks={libraryBooks} setLibrary={setLibrary} search={search} sort={sort}/>
                 </Route>
                 <Route path="/search">
                     <SearchPage 

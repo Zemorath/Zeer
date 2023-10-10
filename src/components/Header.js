@@ -1,12 +1,17 @@
+import { hasSelectionSupport } from "@testing-library/user-event/dist/utils";
 import React, { useState } from "react";
 import { BrowserRouter, Route, NavLink, Switch } from "react-router-dom";
 
-function Header({ setSearch }) {
+function Header({ setSearch, setSort }) {
 
     const [ isActive, setActive ] = useState(false)
 
     function handleLibrarySearch(e) {
         setSearch(e.target.value)
+    }
+
+    function handleSort(e) {
+        setSort(e.target.value)
     }
 
     return (
@@ -20,13 +25,13 @@ function Header({ setSearch }) {
                         <input type="text" placeholder="Search Library..." onChange={handleLibrarySearch}/>
                     </a>
                 </div>
-                <div className="ui dropdown right item">
-                    Sort books
-                    <i class="dropdown icon"></i>
-                    <select class="ui dropdown">
-                        <options value="Title">Title</options>
-                        <options value="Author">Author</options>
-                        <options value="Status">Status</options>
+                <div className="right item">
+                    <select className="ui dropdown" onChange={handleSort}>
+                        <option default="Sort Books">All</option>
+                        <option value="Title A-Z">Title A-Z</option>
+                        <option value="Title Z-A">Title Z-A</option>
+                        <option value="Author A-Z">Author A-Z</option>
+                        <option value="Author Z-A">Author Z-A</option>
                     </select>
                 </div>
             </div>
