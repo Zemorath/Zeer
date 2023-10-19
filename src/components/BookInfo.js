@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
 
-function BookInfo({ book, setLibrary, libraryBooks, onUpdateStatus, onDeleteBook }) {
+function BookInfo({ book, onUpdateStatus, onDeleteBook }) {
     const { title, author, isbn, url, status } = book;
 
     const [ showPic, setShowPic ] = useState(url)

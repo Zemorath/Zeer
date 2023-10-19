@@ -6,7 +6,7 @@
       "author": "Brandon Sanderson",
       "isbn": "9780575089914",
       "url": "https://m.media-amazon.com/images/I/51sKzl+R6OL._SY445_SX342_.jpg",
-      "status": "To Read"
+      "status": "Collectible"
     },
     {
       "id": 2,
@@ -30,7 +30,7 @@
       "isbn": "9780735211735",
       "id": 4,
       "url": "https://m.media-amazon.com/images/I/41QOsSsYHML._SY445_SX342_.jpg",
-      "status": "Reading"
+      "status": "Completed"
     },
     {
       "title": "Smashed",
@@ -71,13 +71,6 @@
       "status": "On Hold"
     },
     {
-      "title": "The Atlas Six",
-      "author": "Olivie Blake",
-      "isbn": "1250854547",
-      "id": 11,
-      "status": "To Read"
-    },
-    {
       "title": "Golden Son",
       "author": "Pierce Brown",
       "isbn": "9781664411418",
@@ -104,6 +97,14 @@
       "isbn": "9781444758986",
       "id": 15,
       "status": "To Read"
+    },
+    {
+      "title": "The Name of the Wind",
+      "author": "Patrick Rothfuss",
+      "isbn": "0756404746",
+      "id": 16,
+      "status": "To Read",
+      "url": "https://m.media-amazon.com/images/I/91b8oNwaV1L._SY466_.jpg"
     }
   ]
 }

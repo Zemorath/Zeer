@@ -1,20 +1,92 @@
 import React, { useState, useEffect } from "react";
-import SearchInfo from "./SearchInfo";
+// import SearchInfo from "./SearchInfo";
 import { useHistory } from "react-router-dom"
 
 
-function SearchPage({ setSearchTitle, setSearchAuthor, setSearchIsbn, searchedBooks, isActive, setActive, handleSearch, libraryBooks, setLibrary, setBooks }) {
+function SearchPage({ isActive, setActive, libraryBooks, setLibrary }) {
+
+    const [ titleInput, setSearchTitle ] = useState('')
+    const [ authorInput, setSearchAuthor ] = useState('')
+    const [ isbnInput, setSearchIsbn ] = useState('')
+    // const [ searchedBooks, setBooks ] = useState([])
+    
 
     const history = useHistory();
 
-    function handleCancel() {
-        setActive(true)
-        setBooks([])
+    // function handleCancel() {
+    //     setActive(true)
+    //     setBooks([])
+    // }
+
+    // function addBook() {
+
+    //     console.log(isbnInput)
+    //     let title = searchedBooks[0].title
+        
+    //     let author = searchedBooks[0].author_name[0]
+    //     let isbn = searchedBooks[0].isbn[0]
+        
+    //     fetch(`http://localhost:3000/books`, {
+    //         method: "POST",
+    //         headers: {
+    //             "Content-Type": "application/json",
+    //         },
+    //         body: JSON.stringify({
+    //             "title": title,
+    //             "author": author,
+    //             "isbn": isbn
+    //         })
+    //     })
+    //         .then((r) => r.json())
+    //         .then((newBook) => {
+    //             setLibrary([...libraryBooks, newBook]);
+    //             history.push("/");
+    //             setBooks([])
+    //         })
+
+    // }
+
+    function handleSearch(e) {
+        e.preventDefault()
+        // let search = (() => {
+        //     if (isbnInput !== '') {
+        //         return isbnInput
+        //     } else if ( titleInput !== '') {
+        //         return titleInput
+        //     } else {
+        //         return authorInput
+        //     }
+        // })();
+
+        // fetch(`https://openlibrary.org/search.json?q=${search}`)
+        //     .then((r) => r.json())
+        //     .then((searchedBooks) => setBooks(searchedBooks.docs))
+
+        const newBook = {
+            title: titleInput,
+            author: authorInput,
+            isbn: isbnInput
+        }
+
+        fetch(`http://localhost:3000/books`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(newBook)
+        })
+            .then((r) => r.json())
+            .then((newBook) => {
+                setLibrary([...libraryBooks, newBook]);
+                history.push("/");
+                setActive(true)
+            })
     }
+    
 
     return (
         <div className="ui middle aligned center aligned grid">
-            {isActive && searchedBooks.length == 0 && (
+            {isActive && (
                 <div className="column">
                     <h2 className="ui black header">
                         <div className="content">Add a book to your library</div>
@@ -41,7 +113,7 @@ function SearchPage({ setSearchTitle, setSearchAuthor, setSearchIsbn, searchedBo
                     </form>
                 </div>
             )}  
-            {isActive && searchedBooks.length > 0 && (
+            {/* {isActive && searchedBooks.length > 0 && (
                 <>
                     <div>
                         <button className="ui negative basic button right floated" onClick={handleCancel}>Cancel Search</button>
@@ -50,7 +122,7 @@ function SearchPage({ setSearchTitle, setSearchAuthor, setSearchIsbn, searchedBo
                         <SearchInfo book={book} key={book.id} libraryBooks={libraryBooks} setLibrary={setLibrary} setActive={setActive} setBooks={setBooks}/>
                     ))}</div>
                 </>
-            )}  
+            )}   */}
         </div>
     )
 }

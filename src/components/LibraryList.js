@@ -53,14 +53,14 @@ function LibraryList({ libraryBooks, search, setLibrary, sort }) {
         setLibrary(newBooks)
     }
 
-    function handleDelete(deletedToy) {
-        const newBooks = libraryBooks.filter((book) => book.id !== deletedToy.id)
+    function handleDelete(deletedBook) {
+        const newBooks = libraryBooks.filter((book) => book.id !== deletedBook.id)
         setLibrary(newBooks)
     }
 
     return (
         <div id="book-collection" className="ui link cards">{filteredBooks.map((book) => (
-            <BookInfo book={book} key={book.id} libraryBooks={libraryBooks} setLibrary={setLibrary} onUpdateStatus={handleStatus} onDeleteBook={handleDelete}/>
+            <BookInfo book={book} key={book.id} onUpdateStatus={handleStatus} onDeleteBook={handleDelete}/>
         ))}</div>
     )
 }
