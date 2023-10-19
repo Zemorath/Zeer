@@ -59,8 +59,9 @@ function BookInfo({ book, onUpdateStatus, onDeleteBook }) {
                     "url": `${cover.src}`,
                 })
             }).then(resp => resp.json())
-            .then(setShowPic(!showPic))
-            .then(setShowButton(!showButton))
+            .then(() => {
+                setShowPic(!showPic)
+                setShowButton(!showButton)})
             
         } else {
 

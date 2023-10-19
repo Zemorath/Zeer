@@ -95,17 +95,17 @@ function SearchPage({ isActive, setActive, libraryBooks, setLibrary }) {
                         <div className="ui stacked segment">
                             <div className="field"> <h3>TITLE</h3>
                                 <div className="ui left text input">
-                                    <input type="text" name="title" placeholder="Title" onChange={(e) => setSearchTitle(e.target.value)}/>
+                                    <input type="text" name="title" placeholder="Title" value={titleInput} onChange={(e) => setSearchTitle(e.target.value)}/>
                                 </div>
                             </div>
                             <div className="field"> <h3>AUTHOR</h3>
                                 <div className="ui left text input">
-                                    <input type="text" name="author" placeholder="Author" onChange={(e) => setSearchAuthor(e.target.value)}/>
+                                    <input type="text" name="author" placeholder="Author" value={authorInput} onChange={(e) => setSearchAuthor(e.target.value)}/>
                                 </div>
                             </div>
                             <div className="field"> <h3>ISBN</h3>
                                 <div className="ui left text input">
-                                    <input type="text" name="isbn" placeholder="ISBN" onChange={(e) => setSearchIsbn(e.target.value)}/>
+                                    <input type="text" name="isbn" placeholder="ISBN" value={isbnInput} onChange={(e) => setSearchIsbn(e.target.value)}/>
                                 </div>
                             </div>
                             <button className="ui fluid large black submit button" type="submit" >Search</button>
