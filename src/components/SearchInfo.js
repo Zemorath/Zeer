@@ -1,9 +1,8 @@
 import React, { useState } from "react"
 import { useHistory } from "react-router-dom";
 
-function SearchInfo({ searchedBooks, setActive, book, libraryBooks, setLibrary, setBooks }) {
+function SearchInfo({ setActive, book, libraryBooks, setLibrary, setBooks }) {
 
-    // console.log(searchedBooks)
     const history = useHistory();
 
     const { title, author_name, isbn, url } = book
