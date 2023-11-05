@@ -122,3 +122,8 @@ code {
   font-size: 2.1em;
   font-weight: lighter;
 }
+
+.ui h3 {
+  font-size: 2em;
+  font-weight: bolder;
+}
