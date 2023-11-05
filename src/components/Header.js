@@ -18,7 +18,8 @@ function Header({ setSearch, setSort }) {
         <div className="ui container">
             <h1 className="ui centered header">Z  E  E  R</h1>
             <div className="ui large secondary inverted pointing menu">
-                <NavLink to="/" className={({ isActive }) => (isActive ? 'active' : 'item')}>Library</NavLink>
+                <NavLink to="/" className={({ isActive }) => (isActive ? 'active' : 'item')}>Home</NavLink>
+                <NavLink to="/library" className={({ isActive }) => (isActive ? 'active' : 'item')}>Library</NavLink>
                 <NavLink to="/search" className={({ isActive }) => (isActive ? 'active' : 'item')}>Add</NavLink>
                 <div className="ui search box">
                     <a className="ui centered input">

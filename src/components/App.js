@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Header from "./Header";
 import LibraryList from "./LibraryList";
 import SearchPage from "./SearchPage";
+import Home from "./HomePage";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 function App() {
@@ -10,7 +11,6 @@ function App() {
 
     const [ search, setSearch ] = useState('')
     const [ sort, setSort ] = useState('')
-    
 
     const [ isActive, setActive ] = useState(true)
 
@@ -26,7 +26,7 @@ function App() {
         <>
             <Header setSearch={setSearch} setSort={setSort}/>
             <Switch>
-                <Route exact path="/">
+                <Route exact path="/library">
                     <LibraryList libraryBooks={libraryBooks} setLibrary={setLibrary} search={search} sort={sort}/>
                 </Route>
                 <Route path="/search">
@@ -36,6 +36,9 @@ function App() {
                         libraryBooks={libraryBooks}
                         setLibrary={setLibrary}
                         />
+                </Route>
+                <Route exact path="/">
+                    <Home />
                 </Route>
             </Switch>
         </>
