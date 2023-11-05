@@ -1,4 +1,3 @@
-import { hasSelectionSupport } from "@testing-library/user-event/dist/utils";
 import React, { useState } from "react";
 import { BrowserRouter, Route, NavLink, Switch } from "react-router-dom";
 

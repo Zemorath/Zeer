@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
 
 function BookInfo({ book, onUpdateStatus, onDeleteBook }) {
     const { title, author, isbn, url, status } = book;
