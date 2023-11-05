@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-// import SearchInfo from "./SearchInfo";
+import React, { useState } from "react";
 import { useHistory } from "react-router-dom"
 
 
