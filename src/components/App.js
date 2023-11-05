@@ -3,7 +3,7 @@ import Header from "./Header";
 import LibraryList from "./LibraryList";
 import SearchPage from "./SearchPage";
 import Home from "./HomePage";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 
 function App() {
 
