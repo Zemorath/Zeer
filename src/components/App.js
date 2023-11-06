@@ -26,8 +26,8 @@ function App() {
         <>
             <Header setSearch={setSearch} setSort={setSort}/>
             <Switch>
-                <Route exact path="/library">
-                    <LibraryList libraryBooks={libraryBooks} setLibrary={setLibrary} search={search} sort={sort}/>
+                <Route exact path="/">
+                    <Home />
                 </Route>
                 <Route path="/search">
                     <SearchPage 
@@ -37,8 +37,8 @@ function App() {
                         setLibrary={setLibrary}
                         />
                 </Route>
-                <Route exact path="/">
-                    <Home />
+                <Route exact path="/library">
+                    <LibraryList libraryBooks={libraryBooks} setLibrary={setLibrary} search={search} sort={sort}/>
                 </Route>
             </Switch>
         </>
