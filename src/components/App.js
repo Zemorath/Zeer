@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Header from "./Header";
 import LibraryList from "./LibraryList";
-import SearchPage from "./SearchPage";
+import AddBook from "./AddBook";
 import Home from "./HomePage";
 import { Route, Switch } from "react-router-dom";
 
@@ -30,7 +30,7 @@ function App() {
                     <Home />
                 </Route>
                 <Route path="/search">
-                    <SearchPage 
+                    <AddBook 
                         isActive={isActive}
                         setActive={setActive}
                         libraryBooks={libraryBooks}

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useHistory } from "react-router-dom"
 
 
-function SearchPage({ isActive, setActive, libraryBooks, setLibrary }) {
+function AddBook({ isActive, setActive, libraryBooks, setLibrary }) {
 
     const [ titleInput, setSearchTitle ] = useState('')
     const [ authorInput, setSearchAuthor ] = useState('')
@@ -69,4 +69,4 @@ function SearchPage({ isActive, setActive, libraryBooks, setLibrary }) {
     )
 }
 
-export default SearchPage;
+export default AddBook;
