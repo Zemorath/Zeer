@@ -1,70 +1,21 @@
-# Getting Started with Create React App
+# Zeer: The Personal Library
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Goal
+One of the worst things about collecting books is that it gets difficult to keep track of books after a certain amount. There are some apps and other services that allow you to add books but after a certain amount, they require you to pay. This is my fix for that. The goal of this is to provide a free alternative to keeping track of your hundreds, or maybe even thousands, of books.
 
-## Available Scripts
+## How to use
+The Website itself is pretty straightforward. When you land on the page you are greeted with the site title. Underneath the title at the top, there is a navigation bar. When you navigate to the library page, you are greeted with all of the books currently in your library represented as cards. 
 
-In the project directory, you can run:
+Each book has a status banner that is color coordinated and can be changed with the drop down menu to the right. There is also a delete button to remove any books you might not have anymore. If the book does not have a photo, there will also be a photo button that when clicked, prompts you to input a url and will add whatever picture is at the end of that. The card also has the title, author, and isbn of the book. On the navigation bar you have the option to search your library by typing in an author, title, isbn, or status if you want to see all the completed books you may have. To the right of that is another dropdown menu that allows you to sort by various methods.
 
-### `npm start`
+The next tab is going to be the add book page. When you navigate to that there is a form for you to fill which will add any information of a book you input for now. Soon it will search OpenLibrary API to give you options of books to add and when you select one, it will add that book automatically with all the necessary information. As it is it relies on whatever you type in.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+And that's it! Like I said, it's pretty straightforward.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Future Features
 
-### `npm test`
+1. Adding the ability to pull options from an online API and choose which book you want to add
+2. Add the ability to log in and save libraries to specific accounts
+3. Add a use rating to each book
+4. Pull average price for each book from online API and keep a running total (to help with those pesky insurance people if anything happens)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
