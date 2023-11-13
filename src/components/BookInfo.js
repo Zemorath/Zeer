@@ -61,8 +61,9 @@ function BookInfo({ book, onUpdateStatus, onDeleteBook }) {
             }).then(resp => resp.json())
             .then(() => {
                 setShowPic(!showPic)
-                setShowButton(!showButton)})
-            
+                setShowButton(!showButton)
+                window.location.reload(false)
+            })
         } else {
 
         }

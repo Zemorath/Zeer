@@ -12,9 +12,6 @@ function App() {
     const [ search, setSearch ] = useState('')
     const [ sort, setSort ] = useState('')
 
-    const [ isActive, setActive ] = useState(true)
-
-
     useEffect(() => {
         fetch(`http://localhost:3000/books`)
             .then((r) => r.json())
@@ -31,8 +28,6 @@ function App() {
                 </Route>
                 <Route path="/search">
                     <AddBook 
-                        isActive={isActive}
-                        setActive={setActive}
                         libraryBooks={libraryBooks}
                         setLibrary={setLibrary}
                         />

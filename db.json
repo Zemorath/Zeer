@@ -9,20 +9,12 @@
       "status": "Collectible"
     },
     {
-      "id": 2,
-      "title": "No Longer Human",
-      "author": "Osamu Dazai",
-      "isbn": "9780811204811",
-      "url": "https://m.media-amazon.com/images/I/61WikOg1SQL._SY466_.jpg",
-      "status": "Completed"
-    },
-    {
       "title": "The creature from Jekyll Island",
       "author": "G. Edward Griffin",
       "isbn": "0912986212",
       "id": 3,
       "url": "https://m.media-amazon.com/images/I/51HwKIrxusL._SY445_SX342_.jpg",
-      "status": "Reading"
+      "status": "Collectible"
     },
     {
       "title": "The daily stoic",
@@ -61,27 +53,22 @@
       "author": "Robert Jackson Bennett",
       "isbn": "1786487853",
       "id": 8,
-      "status": "To Read"
+      "status": "To Read",
+      "url": "https://m.media-amazon.com/images/I/81lmKNW7T0L._AC_UF1000,1000_QL80_.jpg"
     },
     {
       "title": "The Way of Kings",
       "author": "Brandon Sanderson",
       "isbn": "9780575102484",
       "id": 9,
-      "status": "On Hold"
+      "status": "On Hold",
+      "url": "https://m.media-amazon.com/images/I/91v-wMSdaPL._AC_UF1000,1000_QL80_.jpg"
     },
     {
       "title": "Golden Son",
       "author": "Pierce Brown",
       "isbn": "9781664411418",
       "id": 12,
-      "status": "Collectible"
-    },
-    {
-      "title": "Oathbringer",
-      "author": "Brandon Sanderson",
-      "isbn": "1250297141",
-      "id": 13,
       "status": "Collectible"
     },
     {
@@ -98,6 +85,20 @@
       "id": 16,
       "status": "To Read",
       "url": "https://m.media-amazon.com/images/I/91b8oNwaV1L._SY466_.jpg"
+    },
+    {
+      "title": "Python for Data Analysis",
+      "author": "McKinney",
+      "isbn": "9781449319793",
+      "id": 17
+    },
+    {
+      "title": "No Longer Human",
+      "author": "Osamu Dazai",
+      "isbn": "978081120481",
+      "id": 18,
+      "url": "https://m.media-amazon.com/images/I/61WikOg1SQL._AC_UF1000,1000_QL80_.jpg",
+      "status": "Completed"
     }
   ]
 }
