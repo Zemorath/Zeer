@@ -11,3 +11,11 @@ Each book has a status banner that is color coordinated and can be changed with 
 The next tab is going to be the add book page. When you navigate to that there is a form for you to fill which will add any information of a book you input for now. Soon it will search OpenLibrary API to give you options of books to add and when you select one, it will add that book automatically with all the necessary information. As it is it relies on whatever you type in.
 
 And that's it! Like I said, it's pretty straightforward.
+
+## Future Features
+
+1. Adding the ability to pull options from an online API and choose which book you want to add
+2. Add the ability to log in and save libraries to specific accounts
+3. Add a use rating to each book
+4. Pull average price for each book from online API and keep a running total (to help with those pesky insurance people if anything happens)
+
